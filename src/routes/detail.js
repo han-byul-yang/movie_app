@@ -1,12 +1,20 @@
 import React from 'react'
 
 class Detail extends React.Component{
-    componentDidMount(props){
-        console.log(props)
+    componentDidMount(){
+        const {location, history} = this.props
+        if (location.state===undefined){
+            history.push('/')
+            console.log(location.state)
+        }
     }
     render(){
         const {location} = this.props
-        return <h1>this movie's title is {location.state.title}</h1>
+        if (location.state){
+            return <h1>my favorite movie is {location.state.title} </h1>
+        }else{
+            return null
+        }
     }
 }
 
