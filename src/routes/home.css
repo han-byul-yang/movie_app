@@ -2,8 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
-
-.img{
-    transform: scale(0.7);
+.movie{
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
